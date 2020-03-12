@@ -25,7 +25,7 @@ public class Lab {
      * @param capacity the limit of lac
      */
     public Lab(String TA, String day, Course course, int capacity){
-        students=new Student[10];
+        students=new Student[15];
         this.TA=TA;
         this.day=day;
         this.course=course;
