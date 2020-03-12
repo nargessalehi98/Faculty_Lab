@@ -22,9 +22,9 @@ public class Faculty {
      * @param name of faculty
      */
     public Faculty(String name) {
-        students=new Student[10];
-        professors=new Professor[10];
-        courses=new Course[10];
+        students = new Student[10];
+        professors = new Professor[10];
+        courses = new Course[10];
         this.name = name;
     }
 
@@ -115,6 +115,7 @@ public class Faculty {
         }
         return false;
     }
+
     /**
      * @param course is a special course which is checking
      * @return true of false
@@ -125,20 +126,30 @@ public class Faculty {
         }
         return false;
     }
+
     /**
      * @param professor name of special professor which is checking
      * @return true of false
      */
-    public boolean isProfessorValid( Professor professor) {
+    public boolean isProfessorValid(Professor professor) {
         for (Professor value : professors) {
             return value == professor;
         }
         return false;
     }
-    public void printF(){
-        System.out.println("\nABOUT FACULTY:the faculty name is :"+getName()+
-                "\nthe courses are:"+getCourses()+
-                "\nthe students are:"+getStudents()+
-                "\nthe professors are:"+getProfessors());
+
+    public void printF() {
+        System.out.println("\nABOUT FACULTY:the faculty name is :" + getName());
+        for (Course i : getCourses()) {
+            System.out.println("the students are :" + i.getName());
+
+        }
+        for (Student i : getStudents()) {
+            System.out.println("the students are :"+i.getFirstName());
+
+        }
+        for (Professor i : getProfessors()) {
+            System.out.println("the students are :"+i.getFirstName());
+        }
     }
 }

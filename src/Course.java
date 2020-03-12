@@ -124,9 +124,10 @@ public class Course {
 
     public void printC() {
         System.out.println("\nABOUT COURSE:Professor of course is:" + professor.getFirstName() +
-                "\nthe course's student are:" + getStudents() +
-                "\nthe course's capacity is :" + getCurrentCapacity() +
-                "\nthe course's lab is:" + getLabs());
+                "\nthe course's capacity is :" + getCurrentCapacity());
+        for (Student i : getStudents()) {
+            System.out.println("the students are :"+i.getFirstName());
+        }
 
     }
 }

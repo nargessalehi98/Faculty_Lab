@@ -106,8 +106,9 @@ public class Lab {
         System.out.println("\nABOUT LAB:lab's TA is :"+TA+
                 "\nthe current sizs is:"+currentSize+
                 "\nthe day is :"+day+
-                "\nhas capacity:"+hasCapacity()+
-                "\nthe students are :"+getStudents()+
-                "\n");
+                "\nhas capacity:"+hasCapacity());
+        for (Student i : getStudents()) {
+            System.out.println("the students are :"+i.getFirstName());
+        }
     }
 }
