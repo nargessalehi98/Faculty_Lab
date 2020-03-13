@@ -24,13 +24,13 @@ public class Lab {
      * @param course the lab's name
      * @param capacity the limit of lac
      */
-    public Lab(String TA, String day, Course course, int capacity){
+    public Lab(String TA, String day, Course course ,int capacity){
         students=new Student[15];
         this.TA=TA;
         this.day=day;
         this.course=course;
         currentSize=0;
-        capacity=15;
+        this.capacity=capacity;
     }
 
     /**
@@ -96,9 +96,10 @@ public class Lab {
      */
 
     public void enrollStudent(Student student){
-        if (currentSize < capacity) {
+        currentSize=0;
+        if (currentSize < capacity)
             students[currentSize++] = student;
-        } else {
+        else {
             System.out.println("Lab is full!!!");
         }
     }

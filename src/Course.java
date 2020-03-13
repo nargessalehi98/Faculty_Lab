@@ -15,8 +15,6 @@ public class Course {
     private Student[] students;
     // the list of course's lab
     private Lab[] labs;
-    // the limit number of course capacity
-    private int maxCapacity;
     // the number of current capacity
     private int currentCapacity;
 
@@ -27,13 +25,13 @@ public class Course {
      * @param professor of course
      * @param credit    of course
      */
-    public Course(String name, Professor professor, int credit) {
+    public Course(String name, Professor professor, int credit ,int maxCapacity) {
         students = new Student[15];
         labs = new Lab[20];
         this.name = name;
         this.professor = professor;
         credit = 4;
-        maxCapacity = 15;
+        // the limit number of course capacity
     }
 
     /**

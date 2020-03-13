@@ -8,9 +8,9 @@ public class Main {
 
         Professor EE = new Professor("Ehsan", "Edalat");
 
-        Course AP = new Course("AP", EE, 4 );
-        Course ML = new Course("ML", EE, 4);
-        Course DL=new Course("DL",EE,4 );
+        Course AP = new Course("AP", EE, 4,20 );
+        Course ML = new Course("ML", EE, 4,20);
+        Course DL=new Course("DL",EE,4,20 );
 
         Lab APLAb = new Lab("TA", "saturday", AP, 15);
 
@@ -21,7 +21,7 @@ public class Main {
         S1.print();
 
         EE.setCourses(new Course[]{AP, ML});
-        EE.addCourse(new Course("DL", EE, 4));
+        EE.addCourse(new Course("DL", EE, 4,20));
         EE.setCourses(new Course[]{AP, ML,DL});
         EE.printp();
 
@@ -30,28 +30,28 @@ public class Main {
         APLAb.setDay("saturday");
         APLAb.hasCapacity();
         APLAb.enrollStudent(S2);
-        APLAb.setStudents(new Student[]{S1});
+        APLAb.setStudents(new Student[]{S2});
         APLAb.printL();
 
 
-        AP.setProfessor(new Professor("Narges", "Salehi"));
-        AP.setStudents(new Student[]{S1});
+        AP.setProfessor(new Professor("Ehsannnn", "Edalattt"));
+        AP.setStudents(new Student[]{S2});
         AP.setCapacity(13);
         AP.addLab(APLAb);
         AP.enrollStudent(S2);
         AP.printC();
 
         Computer.setCourses(new Course[]{AP,ML});
-        Computer.addCourse(new Course("DL",EE,4));
+        Computer.addCourse(new Course("DL",EE,4,20));
         Computer.setCourses(new Course[]{AP,ML});
-        Computer.setStudents(new Student[]{S1});
+        Computer.setStudents(new Student[]{S2});
         Computer.setProfessors(new Professor[]{EE});
         Computer.enrollStudent(S2);
         Computer.addCourse(DL);
         Computer.addProfessor(EE);
         Computer.isCourseValid(DL);
         Computer.isProfessorValid(EE);
-        Computer.isStudentValid(S1);
+        Computer.isStudentValid(S2);
         Computer.printF();
 
     }

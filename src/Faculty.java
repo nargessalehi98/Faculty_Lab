@@ -141,7 +141,7 @@ public class Faculty {
     public void printF() {
         System.out.println("\nABOUT FACULTY:the faculty name is :" + getName());
         for (Course i : getCourses()) {
-            System.out.println("the students are :" + i.getName());
+            System.out.println("the course are :" + i.getName());
 
         }
         for (Student i : getStudents()) {
@@ -149,7 +149,7 @@ public class Faculty {
 
         }
         for (Professor i : getProfessors()) {
-            System.out.println("the students are :"+i.getFirstName());
+            System.out.println("the professor are :"+i.getFirstName());
         }
     }
 }
